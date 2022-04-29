@@ -1,0 +1,20 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6 mx-auto">
+      <h1>Welcome to the ECD Application</h1>
+      <p class="my-5">
+        User login status:
+        <strong>{{
+          (authenticationStatus$ | async) ? "Authenticated" : "Not logged in"
+        }}</strong>
+      </p>
+      <button
+        class="btn btn-outline-primary px-5"
+        [disabled]="authenticationStatus$ | async"
+        (click)="onUserLogin()"
+      >
+        Login
+      </button>
+    </div>
+  </div>
+</div>
