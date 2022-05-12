@@ -8,7 +8,6 @@ import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'docking', component: DockingComponent },
   { path: 'welcome', component: WelcomeComponent },
   { path: 'aggrid', component: AgGridComponent },
   { path: '', redirectTo: '/welcome', pathMatch: 'full' },
