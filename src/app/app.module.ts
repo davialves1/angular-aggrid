@@ -17,7 +17,12 @@ import { TabsModule } from 'smart-webcomponents-angular/tabs';
 import { TextBoxModule } from 'smart-webcomponents-angular/textbox';
 import { SliderModule } from 'smart-webcomponents-angular/slider';
 import { MultilineTextBoxModule } from 'smart-webcomponents-angular/multilinetextbox';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchFieldComponent } from './search-field/search-field.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -27,6 +32,7 @@ import { FormsModule } from '@angular/forms';
     PageNotFoundComponent,
     AgGridComponent,
     DockingComponent,
+    SearchFieldComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +46,11 @@ import { FormsModule } from '@angular/forms';
     MultilineTextBoxModule,
     StoreModule.forRoot({ authentication: authenticateReducer }),
     AgGridModule.withComponents([]),
+    BrowserAnimationsModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

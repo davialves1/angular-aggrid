@@ -17,9 +17,11 @@ export class AgGridComponent {
 
   serverAWS = 'http://18.193.129.166/';
 
+  localServer = 'http://localhost:8080/dataset/';
+
   constructor(private http: HttpClient) {
     this.rowData$ = http
-      .get<{ dataset: any[] }>(this.serverAWS)
+      .get<{ dataset: any[] }>(this.localServer)
       .pipe(map((data) => data.dataset));
   }
 }

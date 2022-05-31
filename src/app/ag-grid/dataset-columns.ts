@@ -1,6 +1,15 @@
 const dataSetColumns: DataSetHttpResponse[] = [
   { field: 'id', sortable: true, filter: true, checkboxSelection: true },
-  { field: 'first_name', sortable: true, filter: true },
+  {
+    field: 'first_name',
+    sortable: true,
+    filter: true,
+    editable: true,
+    cellEditor: 'agSelectCellEditor',
+    cellEditorParams: {
+      values: ['Avinash', 'Rishu', 'Davi'],
+    },
+  },
   { field: 'last_name', sortable: true, filter: true },
   { field: 'email', sortable: true, filter: true },
   { field: 'gender', sortable: true, filter: true },
@@ -22,8 +31,13 @@ export default dataSetColumns;
 export interface DataSetHttpResponse {
   field: string;
   sortable: boolean;
+  editable?: boolean;
   filter: boolean;
+  cellEditor?: string;
+  cellEditorParams?: any;
   checkboxSelection?: boolean;
+  cellClassRules?: any;
+  cellRenderer?: any;
 }
 
 export interface DataSetColumns {
