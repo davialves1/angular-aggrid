@@ -23,6 +23,7 @@ import { SearchFieldComponent } from './search-field/search-field.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
+import { DroplistComponent } from './droplist/droplist.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MatInputModule } from '@angular/material/input';
     AgGridComponent,
     DockingComponent,
     SearchFieldComponent,
+    DroplistComponent,
   ],
   imports: [
     BrowserModule,

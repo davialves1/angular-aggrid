@@ -5,22 +5,17 @@ const dataSetColumnsLarge: DataSetHttpResponse[] = [
   { field: 'id', sortable: true, filter: true, checkboxSelection: true },
   {
     field: 'first_name',
+    headerName: 'Brand',
     sortable: true,
     filter: true,
-    editable: true,
-    cellEditor: 'agSelectCellEditor',
-    cellEditorParams: {
-      values: ['Avinash', 'Rishu', 'Davi'],
-    },
-    cellClassRules: {
-      'text-danger': (params: any) => params.value === 'Davi',
-    },
   },
-  { field: 'last_name', sortable: true, filter: true, editable: true },
+  { field: 'last_name',
+    headerName: 'Last Name',
+    sortable: true, filter: true, editable: true },
   {
     field: 'Car',
-    sortable: true,
-    filter: true,
+    sortable: false,
+    filter: false,
     cellRenderer: SearchFieldComponent,
   },
   { field: 'gender', sortable: true, filter: true },

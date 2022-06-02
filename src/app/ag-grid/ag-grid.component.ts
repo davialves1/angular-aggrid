@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { ColDef } from 'ag-grid-community';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs';
 import dataSetColumnsLarge from './dataset-columns-large';
 
 @Component({

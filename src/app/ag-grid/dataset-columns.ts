@@ -38,6 +38,8 @@ export interface DataSetHttpResponse {
   checkboxSelection?: boolean;
   cellClassRules?: any;
   cellRenderer?: any;
+  cellEditorPopup?: boolean;
+  headerName?: string
 }
 
 export interface DataSetColumns {

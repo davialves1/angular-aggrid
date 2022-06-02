@@ -47,6 +47,7 @@ export class SearchFieldComponent implements ICellRendererAngularComp {
   }
 
   selectedValue!: string;
+  private params!: ICellRendererParams;
 
   private _filter(value: string): string[] {
     this.cellValue = value;
@@ -63,11 +64,13 @@ export class SearchFieldComponent implements ICellRendererAngularComp {
   refresh(params: ICellRendererParams): boolean {
     // this.cellValue = this.getValueToDisplay(params);
     this.cellValue = this.selectedValue;
+    this.params = params;
     return true;
   }
 
   agInit(params: ICellRendererParams): void {
     //
+    this.params = params;
   }
 
   getValueToDisplay(params: ICellRendererParams) {
